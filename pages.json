@@ -1,0 +1,72 @@
+{
+	"pages": [{
+		"path": "pages/home/home",
+		"style": {
+			// "navigationBarTitleText": "头像制作",
+			"enablePullDownRefresh": true, //开启下拉刷新
+			"app-plus": {
+				"titleNView": 
+				{
+					// "buttons":[{
+					// 	"type":"none",
+					// 	"width": "40px",
+					// 	"height":"40px"
+					// }],
+					"titleText": "头像制作"
+					// "tags": [{
+					// 	"tag": "img",
+					// 	"src": "/static/image/open-vip-icon.png",
+					// 	"position": {
+					// 		"right": "20",
+					// 		"top": "auto",
+					// 		"width": "auto",
+					// 		"height": "38rpx"
+					// 	}
+					// }]
+				}
+			}
+		}
+	}, {
+		"path": "pages/login/login",
+		"style": {
+			"navigationBarTitleText": "登陆"
+		}
+	}, {
+		"path": "pages/my/my",
+		"style": {
+			"navigationBarTitleText": "我的"
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F5F5F5",
+		"app-plus": {
+			"background": "#F5F5F5"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"iconPath": "static/image/icon-home.png",
+			"selectedIconPath": "static/image/icon-home-in.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/image/icon-my.png",
+			"selectedIconPath": "static/image/icon-my.png",
+			"text": "接口"
+		}],
+		"midButton": {
+			"width": "60px",
+			"height": "70px",
+			"iconPath": "static/image/close-picker.png",
+			"iconWidth": "60px"
+		}
+	}
+}
