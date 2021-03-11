@@ -28,6 +28,7 @@
 </template>
 
 <script>
+	import {createView} from 'utils/createView.js'
 	export default {
 		data() {
 			return {
@@ -109,24 +110,30 @@
 		},
 		onLoad() {
 			// #ifdef APP-PLUS  
-			const view = new plus.nativeObj.View('vipIcon', {
+			createView('vipIcon', 'open-vip-icon', {
 					top: '30px',
 					right: '20px',
 					height: '19px',
 					width: '21px'
-				},
-				[{
-					tag: 'img',
-					id: 'img',
-					src: 'static/image/open-vip-icon.png',
-					position: {
-						"right": "0",
-						"top": "0",
-						"width": "100%",
-						"height": "100%"
-					}
-				}]);
-			view.show()
+				})
+			// const view = new plus.nativeObj.View('vipIcon', {
+			// 		top: '30px',
+			// 		right: '20px',
+			// 		height: '19px',
+			// 		width: '21px'
+			// 	},
+			// 	[{
+			// 		tag: 'img',
+			// 		id: 'img',
+			// 		src: 'static/image/open-vip-icon.png',
+			// 		position: {
+			// 			"right": "0",
+			// 			"top": "0",
+			// 			"width": "100%",
+			// 			"height": "100%"
+			// 		}
+			// 	}]);
+			// view.show()
 			// #endif
 		}
 	}

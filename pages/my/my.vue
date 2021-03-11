@@ -29,6 +29,7 @@
 </template>
 
 <script>
+	import {createBackBtn} from 'utils/createView.js'
 	export default {
 		data() {
 			return {
@@ -37,11 +38,28 @@
 				extraIcon3: {color: '#4cd964',size: '22',type: 'person-filled'},
 				extraIcon4: {color: '#4cd964',size: '22',type: 'person-filled'},
 			};
+		},
+		mounted() {
+			// #ifdef APP-PLUS
+			const view = plus.nativeObj.View.getViewById('vipIcon')
+			view.addEventListener('click', this.goToBecomeVip.bind(this), false)
+			// #endif
+		},
+		beforeDestroy() {
+			// #ifdef APP-PLUS
+			const view = plus.nativeObj.View.getViewById('vipIcon')
+			view.removeEventListener('click', this.goToBecomeVip.bind(this), false)
+			// #endif
+		},
+		onLoad() {
+			// #ifdef APP-PLUS  
+			createBackBtn()
+			//  #endif
 		}
 	}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .container {
 	padding: 20rpx;
 	height: 100%;

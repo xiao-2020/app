@@ -1,42 +1,46 @@
 {
 	"pages": [{
-		"path": "pages/home/home",
-		"style": {
-			// "navigationBarTitleText": "头像制作",
-			"enablePullDownRefresh": true, //开启下拉刷新
-			"app-plus": {
-				"titleNView": 
-				{
-					// "buttons":[{
-					// 	"type":"none",
-					// 	"width": "40px",
-					// 	"height":"40px"
-					// }],
-					"titleText": "头像制作"
-					// "tags": [{
-					// 	"tag": "img",
-					// 	"src": "/static/image/open-vip-icon.png",
-					// 	"position": {
-					// 		"right": "20",
-					// 		"top": "auto",
-					// 		"width": "auto",
-					// 		"height": "38rpx"
-					// 	}
-					// }]
+			"path": "pages/home/home",
+			"style": {
+				"enablePullDownRefresh": true, //开启下拉刷新
+				"app-plus": {
+					"titleNView": {
+						"titleText": "头像制作"
+					}
 				}
 			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登陆"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "头像制作"
+			}
+		},
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/yinsizhengce/yinsizhengce",
+			"style": {
+				"navigationBarTitleText": "隐私政策"
+			}
+		},
+		{
+			"path": "pages/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "留言反馈"
+			}
 		}
-	}, {
-		"path": "pages/login/login",
-		"style": {
-			"navigationBarTitleText": "登陆"
-		}
-	}, {
-		"path": "pages/my/my",
-		"style": {
-			"navigationBarTitleText": "我的"
-		}
-	}],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
