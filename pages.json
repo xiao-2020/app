@@ -39,6 +39,13 @@
 			"style": {
 				"navigationBarTitleText": "留言反馈"
 			}
+		}, {
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充值中心",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
