@@ -80,7 +80,7 @@
 			"pagePath": "pages/my/my",
 			"iconPath": "static/image/icon-my.png",
 			"selectedIconPath": "static/image/icon-my.png",
-			"text": "接口"
+			"text": "我的"
 		}],
 		"midButton": {
 			"width": "60px",

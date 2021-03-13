@@ -19,9 +19,9 @@
 			<view class="detail-info">
 				<uni-list>
 					<uni-list-item :show-extra-icon="true" clickable="true" :extra-icon="extraIcon1" title="账号类型" rightText="普通用户" showArrow="true"></uni-list-item>
-					<uni-list-item :show-extra-icon="true" clickable="true" :extra-icon="extraIcon4" title="到期时间" rightText="2020-02-09 14:22" ></uni-list-item>
+					<uni-list-item :show-extra-icon="true" :extra-icon="extraIcon4" title="到期时间" rightText="2020-02-09 14:22" ></uni-list-item>
 					<uni-list-item :show-extra-icon="true" clickable="true" :extra-icon="extraIcon2" title="意见反馈" rightText="钜惠热销" showArrow="true"></uni-list-item>
-					<uni-list-item :show-extra-icon="true" clickable="true" :extra-icon="extraIcon3" title="开通Vip" showArrow="true"></uni-list-item>
+					<uni-list-item :show-extra-icon="true" link="/pages/recharge/recharge" clickable="true" :extra-icon="extraIcon3" title="开通Vip" showArrow="true"></uni-list-item>
 				</uni-list>
 			</view>
 		</view>
@@ -39,22 +39,33 @@
 				extraIcon4: {color: '#4cd964',size: '22',type: 'person-filled'},
 			};
 		},
+		methods: {
+			backToHome() {
+				
+			}
+		},
 		mounted() {
 			// #ifdef APP-PLUS
-			const view = plus.nativeObj.View.getViewById('vipIcon')
-			view.addEventListener('click', this.goToBecomeVip.bind(this), false)
+			const view = plus.nativeObj.View.getViewById('back')
+			view.addEventListener('click', this.backToHome.bind(this), false)
 			// #endif
 		},
 		beforeDestroy() {
 			// #ifdef APP-PLUS
-			const view = plus.nativeObj.View.getViewById('vipIcon')
-			view.removeEventListener('click', this.goToBecomeVip.bind(this), false)
+			const view = plus.nativeObj.View.getViewById('back')
+			view.removeEventListener('click', this.backToHome.bind(this), false)
 			// #endif
 		},
 		onLoad() {
 			// #ifdef APP-PLUS  
 			createBackBtn()
 			//  #endif
+		},
+		onHide() {
+			// #ifdef APP-PLUS
+			const view = plus.nativeObj.View.getViewById('back')
+			view.hide()
+			// #endif
 		}
 	}
 </script>

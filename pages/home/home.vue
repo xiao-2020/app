@@ -16,60 +16,30 @@
 					形象空空，点击下方“+”开始创建
 				</text>
 			</view>
-			<cover-view class="modal">123</cover-view>
-			<uni-popup ref="popup" type="bottom">
-				<view class="pop-container">
-					login
-				</view>
-			</uni-popup>
-			
 		</view>
+		<uni-popup ref="popup" type="bottom">
+			<view class="wrap">
+				<view class="sex" @click="setSex('1')">
+					<image src="/static/image/mail.png" mode="aspectFit"></image>
+					<text>男生</text>
+				</view>
+				<view class="sex"  @click="setSex('2')">
+					<image src="/static/image/femail.png" mode="aspectFit"></image>
+					<text>女生</text>
+				</view>
+			</view>
+		</uni-popup>
 	</view>
 </template>
 
 <script>
-	import {createView} from 'utils/createView.js'
+	import {
+		createView
+	} from 'utils/createView.js'
 	export default {
 		data() {
 			return {
-				headerList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-					27, 28,
-				],
+				headerList: [],
 			}
 		},
 		methods: {
@@ -79,10 +49,32 @@
 			},
 			// 点击头像跳转到详情页面
 			editHeader(item) {},
-			
+
 			// 打开成为vip界面
 			goToBecomeVip() {
+				uni.navigateTo({
+					url: '/pages/recharge/recharge'
+				})
+			},
+			midBtnClick(e) {
+				// TODO: 先判断是否进行了登陆
+				// const userInfo = uni.getStorageSync('userInfo')
+				// if (!userInfo) {
+				// 	uni.navigateTo({
+				// 		url: '/pages/login/login',
+				// 		fail(e) {
+				// 			console.log(e)
+				// 		}
+				// 	})
+				// }
+				// 点击先选择性别
 				this.$refs.popup.open()
+			},
+			setSex(sex) {
+				this.$refs.popup.close()
+				uni.navigateTo({
+					url:'/pages/operate/operate?sex=' + sex
+				})
 			}
 		},
 		mounted() {
@@ -101,39 +93,36 @@
 			await this.queryHeaderList()
 			uni.stopPullDownRefresh()
 		},
-		onNavigationBarButtonTap() {
-			console.log("点击了自定义按钮");
-			// this.$refs.popup.open()
-			uni.navigateTo({
-				url:'pages/login/login'
-			})
-		},
+		// onNavigationBarButtonTap() {
+		// 	console.log("点击了自定义按钮");
+		// 	// this.$refs.popup.open()
+		// 	uni.navigateTo({
+		// 		url:'/pages/login/login'
+		// 	})
+		// },
 		onLoad() {
+			uni.onTabBarMidButtonTap(this.midBtnClick.bind(this))
 			// #ifdef APP-PLUS  
 			createView('vipIcon', 'open-vip-icon', {
-					top: '30px',
-					right: '20px',
-					height: '19px',
-					width: '21px'
-				})
-			// const view = new plus.nativeObj.View('vipIcon', {
-			// 		top: '30px',
-			// 		right: '20px',
-			// 		height: '19px',
-			// 		width: '21px'
-			// 	},
-			// 	[{
-			// 		tag: 'img',
-			// 		id: 'img',
-			// 		src: 'static/image/open-vip-icon.png',
-			// 		position: {
-			// 			"right": "0",
-			// 			"top": "0",
-			// 			"width": "100%",
-			// 			"height": "100%"
-			// 		}
-			// 	}]);
-			// view.show()
+				top: '30px',
+				right: '20px',
+				height: '19px',
+				width: '21px'
+			})
+			// #endif
+		},
+		onShow() {
+			// #ifdef APP-PLUS
+			setTimeout(() => {
+				const view = plus.nativeObj.View.getViewById('vipIcon')
+				view?.show()
+			}, 300)
+			// #endif
+		},
+		onHide() {
+			// #ifdef APP-PLUS
+			const view = plus.nativeObj.View.getViewById('vipIcon')
+			view?.hide()
 			// #endif
 		}
 	}
@@ -186,14 +175,42 @@
 					background-color: red;
 				}
 			}
-				.modal {
-					position: fixed;
+
+			.modal {
+				position: fixed;
+				width: 100%;
+				height: 600rpx;
+				background-color: #fff;
+				bottom: 0;
+				z-index: 999;
+			}
+		}
+		.wrap {
+			width: 100%;
+			height: 500rpx;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			background-color: #fff;
+			border-radius: 20rpx 20rpx 0 0 ;
+			/* #ifndef APP-PLUS */
+			padding-bottom: 100rpx;
+			box-sizing: border-box;
+			/* #endif */
+			.sex {
+				width: 90rpx;
+				font-size: 26rpx;
+				font-weight: 600;
+				color: #929297;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				image {
 					width: 100%;
-					height: 600rpx;
-					background-color: #fff;
-					bottom: 0;
-					z-index: 999;
+					height: 90rpx;
+					margin-bottom: 30rpx;
 				}
+			}
 		}
 	}
 </style>
